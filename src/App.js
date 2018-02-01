@@ -31,8 +31,8 @@ function SearchBar(props) {
   return (
     <div className="SearchBar">
       <form>
+        <i className="SearchIcon fa fa-search"></i>
         <input type="text" name="query" placeholder="Search..."/>
-        <button type="submit"><i class="fa fa-search"></i></button>
       </form>
     </div>
   );
@@ -41,6 +41,7 @@ function SearchBar(props) {
 function SearchMovieItem(props) {
   return (
     <div className="SearchMovieItem">
+    {props.movie.title}
     </div>
   );
 }
@@ -53,7 +54,7 @@ function SearchPane(props) {
     movie2
   ];
   return (
-    <div className="searchPane">
+    <div className="SearchPane">
       <SearchBar />
       <SearchResults movieList={movieList} />
     </div>
@@ -63,12 +64,11 @@ function SearchPane(props) {
 // Parameters:
 //   movieList: Array of movie objects.
 function SearchResults(props) {
-  let searchMovieItemList = props.movieList; //.map(
-//    (movie) => <SearchMovieItem movie={movie} />
-//  );
+  let searchMovieItemList = props.movieList;
+  // TODO: make SearchMovieItem for each element in movieList
   return (
-    <div>
-    {searchMovieItemList[0].title}
+    <div className="SearchResults">
+      <SearchMovieItem movie={searchMovieItemList[0]}/>
     </div>
   );
 }

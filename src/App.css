@@ -1,51 +1,50 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  width: 99%;
+  height: 99%;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+  height: 100px;
 }
 
 .App-title {
   font-size: 1.5em;
 }
 
-.App-intro {
-  font-size: large;
-}
-
 .SearchBar {
-  display: inline-block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 50px 0px 50px;
+  position: relative;
 }
 
 .SearchBar input {
-
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
 }
 
-.SearchBar button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
+.SearchIcon  {
+  color:#888;
+  position: absolute;
+  top: 12px;
+  left: 60px;
+  font-size: 20px;
 }
 
-.SearchBar button #hover {
-  background: #ccc;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.SearchResults {
+  display: none;
 }
