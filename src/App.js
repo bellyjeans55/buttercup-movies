@@ -15,6 +15,8 @@ class App extends Component {
         <Logo />
         <h1 className="App-title">Buttercup</h1>
         <SearchPane />
+        <TV destination="aboutUs" text="About Us"/>
+        <TV destination="movies" text="Movies"/>
       </div>
     );
   }
@@ -76,7 +78,10 @@ function SearchResults(props) {
 function TV(props) {
   let tv_path = "./" + props.destination;
   return (
-    <a href={tv_path}><img src={tv} className="TV" alt="TV"/></a>
+    <a className="TvContainer" href={tv_path}>
+      <img src={tv} className="TV" alt="TV"/>
+      <div className="TextContainer">{props.text}</div>
+    </a>
   );
 }
 

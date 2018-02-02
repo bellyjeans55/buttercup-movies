@@ -48,3 +48,20 @@ body, html {
 .SearchResults {
   display: none;
 }
+
+.TV {
+  width: 100px;
+  height: 100px;
+}
+
+.TvContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.TvContainer .TextContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-62%, -12px);
+}
