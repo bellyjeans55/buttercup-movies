@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import Movie from './model/movie.js';
 
 import logo from './images/logo.png';
-import searchIcon from './images/searchIcon.png';
-import tv from './images/tv.png'
+import tv from './images/tv.png';
 
 import './App.css';
 
@@ -13,10 +12,10 @@ class App extends Component {
     return (
       <div className="App">
         <Logo />
-        <h1 className="App-title">Buttercup</h1>
+        <h1 className="App-title">Buttercup Movies</h1>
         <SearchPane />
-        <TV destination="aboutUs" text="About Us"/>
-        <TV destination="movies" text="Movies"/>
+        <TV Id="aboutUsTV" destination="aboutUs" text="About Us"/>
+        <TV Id="moviesTV" destination="movies" text="Movies"/>
       </div>
     );
   }
@@ -78,7 +77,7 @@ function SearchResults(props) {
 function TV(props) {
   let tv_path = "./" + props.destination;
   return (
-    <a className="TvContainer" href={tv_path}>
+    <a id={props.Id} className="TvContainer" href={tv_path}>
       <img src={tv} className="TV" alt="TV"/>
       <div className="TextContainer">{props.text}</div>
     </a>

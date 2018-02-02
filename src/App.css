@@ -2,11 +2,13 @@
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Oxygen Mono', monospace;
 }
 
 body, html {
   width: 99%;
   height: 99%;
+  background-color: #bce8fc;
 }
 
 .App {
@@ -14,18 +16,31 @@ body, html {
 }
 
 .App-logo {
+  position: absolute;
   height: 100px;
+  left: 15px;
+  top: 15px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2.5em;
+  position: absolute;
+  top: 15px;
+  left: 130px;
+  font-family: 'Cutive Mono', monospace;
+  width: 400px;
+  color: #454545;
 }
 
 .SearchBar {
   max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   padding: 0px 50px 0px 50px;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
 }
 
 .SearchBar input {
@@ -57,11 +72,25 @@ body, html {
 .TvContainer {
   position: relative;
   display: inline-block;
+  margin: 10px;
 }
 
 .TvContainer .TextContainer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-62%, -12px);
+  transform: translate(-50%, -78%);
+  color: #454545;
+}
+
+#aboutUsTV {
+  position: absolute;
+  left: 100px;
+  top: 20%;
+}
+
+#moviesTV {
+  position: absolute;
+  top: 20%;
+  right: 100px;
 }
